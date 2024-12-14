@@ -1,0 +1,112 @@
+<!DOCTYPE html>      <!-- Indica que el documento es Html5-->
+<html lang="es">     <!-- La etiqueta raíz de todo el documento HTML. El atributo lang="es" especifica que el idioma es español. -->
+<head>                 <!-- Contiene metadatos y configuraciones importantes para el navegador: -->
+    <meta charset="UTF-8">   <!-- Define la codificación de caracteres (UTF-8, para soportar todos los caracteres).  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Asegura que el diseño sea adaptable en dispositivos móviles ajustando la escala.-->
+    <title>Sitio Web Responsive</title>           <!--  Especifica el título que aparece en la pestaña del navegador. -->
+    <style>                                       
+        /* Contiene todos los Estilos globales CSS del documento  */        
+        body {                                                  /* Define la fuente, elimina márgenes/padding predeterminados y asegura un modelo de caja consistente con box-sizing: border-box.  */ 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {                                        /* Crea una barra superior con un fondo oscuro, texto blanco, y centrado */
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {                                   /* implementa un menú horizontal con enlaces espaciados y estilizados.  */ 
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {                              /* Establece una cuadrícula adaptable para los contenidos principales, con un espaciado uniforme (gap: 1rem).  */
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        section {                           /* Define bloques individuales con un fondo claro, bordes suaves, y padding.  */
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        footer {                            /* Un pie de página con fondo oscuro y texto blanco.  */
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Estilos responsivos */
+        @media (min-width: 768px) {         /* A partir de 768px, la cuadrícula del main pasa de una columna a dos.  */
+            main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {           /* A partir de 1024px, la cuadrícula del main se adapta a tres columnas. */
+            main {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>                     <!-- Encabezado principal que contiene el título del sitio web.-->           
+        <h1>Sitio Web Responsive</h1>
+    </header>
+    <nav>                        <!-- Barra de navegación con enlaces que redirigen a diferentes partes del sitio. Los enlaces son estilizados y cambian cuando se pasa el mouse (hover).-->
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Acerca de</a>
+        <a href="#">Contacto</a>
+    </nav>
+    <main>                           <!-- Contenedor principal con una estructura de cuadrícula que incluye varias secciones:
+
+        Cada <section> contiene un subtítulo (<h2>) y un párrafo (<p>).-->
+        <section>
+            <h2>Sección 1</h2>
+            <p>Contenido de la sección 1.</p>
+        </section>
+        <section>
+            <h2>Sección 2</h2>
+            <p>Contenido de la sección 2.</p>
+        </section>
+        <section>
+            <h2>Sección 3</h2>
+            <p>Contenido de la sección 3.</p>
+        </section>
+        <section>
+            <h2>Sección 4</h2>
+            <p>Contenido de la sección 4.</p>
+        </section>
+    </main>
+    <footer>                             <!-- Pie de página con derechos de autor.-->
+        <p>&copy; 2024 Sitio Web Responsive Jamileth Gongora</p>
+    </footer>
+</body>
+</html>
